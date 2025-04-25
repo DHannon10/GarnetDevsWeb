@@ -14,7 +14,7 @@ body {
   h1, h2 {
     margin-bottom: 0.5em;
   }
-  .video, .features, .screenshots, .team, .links {
+  .video, .features, .team, .links {
     padding: 2em 1em;
   }
   img {

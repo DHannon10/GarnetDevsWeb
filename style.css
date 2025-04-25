@@ -29,7 +29,7 @@ h2 {
   margin-bottom: 0.5em;
 }
 
-.video, .features, .how-to-use, .team, .links {
+.features, .how-to-use, .team, .links {
   padding: 2.5em 1em;
 }
 
@@ -48,10 +48,24 @@ h2 {
   margin-top: 0;
 }
 
+.video {
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 3em auto;
+  padding: 3em 2em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
 .video iframe {
-  border-radius: 8px;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-width: 720px;
+  height: 405px; /* 16:9 aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block;
+  margin: 2em auto 0;
 }
 
 /* Image Styling */

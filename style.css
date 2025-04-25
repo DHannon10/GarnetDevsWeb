@@ -37,4 +37,21 @@ body {
     padding: 1em;
     font-size: 0.9em;
   }
+  .screenshots {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2em 1em;
+  }
+  .screenshots img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  .screenshots img:hover {
+    transform: scale(1.05);
+  }
   

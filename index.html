@@ -5,6 +5,51 @@
   <meta charset="UTF-8">
   <title>PayHUB Management System</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fdfdfd;
+    }
+    .screenshots {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2em 1em;
+    }
+    .screenshots img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .screenshots img:hover {
+      transform: scale(1.05);
+    }
+    .lightbox-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 20px #000;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+    a.lightbox {
+      cursor: zoom-in;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -20,7 +65,6 @@
   <section class="features">
     <h2>Why Use PayHUB?</h2>
     <p><strong>PayHUB</strong> is a comprehensive payroll management platform that empowers businesses to handle payroll, benefits, and taxes all in one centralized system.</p>
-  
     <ul style="text-align: left; max-width: 800px; margin: auto;">
       <li><strong>Payroll Processing:</strong> Calculate and distribute accurate payouts quickly and securely.</li>
       <li><strong>Employee Management:</strong> View, add, and update employee records, including salaries, roles, and benefits.</li>
@@ -35,7 +79,6 @@
   <section class="how-to-use">
     <h2>How to Use PayHUB</h2>
     <p>PayHUB makes payroll and expense management simple. Follow these steps to get started:</p>
-  
     <ol style="text-align: left; max-width: 800px; margin: auto;">
       <li><strong>Log In:</strong> Sign in securely using OAuth-based authentication.</li>
       <li><strong>Add Employees:</strong> Navigate to the <a href="http://ec2-54-225-36-39.compute-1.amazonaws.com/add_employee/" target="_blank">Add Employee</a> page to input employee details like name, salary, and hire date.</li>
@@ -44,15 +87,14 @@
       <li><strong>View Reports:</strong> Access payroll summaries, tax details, and benefit overviews from the dashboard to stay on top of your financial health.</li>
       <li><strong>Download Documents:</strong> Export payroll and tax reports in PDF or CSV format as needed.</li>
     </ol>
-
     <p>Note. The hyperlinks will work correctly if you are logged into PayHUB.</p>
   </section>
   
   <section class="screenshots">
     <h2>Screenshots</h2>
-    <img src="images/screenshot1.png" alt="Login View">
-    <img src="images/screenshot2.png" alt="Employee Dashboard">
-    <img src="images/screenshot3.png" alt="Payroll Report">
+    <a href="images/screenshot1.png" class="lightbox"><img src="images/screenshot1.png" alt="Add Employee View"></a>
+    <a href="images/screenshot2.png" class="lightbox"><img src="images/screenshot2.png" alt="Monthly Payroll Trends"></a>
+    <a href="images/screenshot3.png" class="lightbox"><img src="images/screenshot3.png" alt="Welcome to PayHUB Dashboard"></a>
   </section>
 
   <section class="links">
@@ -63,5 +105,27 @@
   <footer>
     <p>&copy; 2025 GarnetDevs Team</p>
   </footer>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <img id="lightbox-img" src="" alt="Expanded screenshot">
+  </div>
+
+  <script>
+    const overlay = document.getElementById("lightbox");
+    const overlayImg = document.getElementById("lightbox-img");
+    const links = document.querySelectorAll(".lightbox");
+
+    links.forEach(link => {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        overlayImg.src = this.href;
+        overlay.style.display = "flex";
+      });
+    });
+
+    overlay.addEventListener("click", function () {
+      overlay.style.display = "none";
+    });
+  </script>
 </body>
 </html>

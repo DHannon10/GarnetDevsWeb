@@ -51,6 +51,20 @@
     a.lightbox {
       cursor: zoom-in;
     }
+    .screenshot-heading {
+      margin-top: 3rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 36px;
+      color: white;
+      cursor: pointer;
+      z-index: 1101;
+    }
   </style>
 </head>
 <body>
@@ -92,8 +106,8 @@
     <p>Note. The hyperlinks will work correctly if you are logged into PayHUB.</p>
   </section>
   
+  <h2 class="screenshot-heading">Screenshots</h2>
   <section class="screenshots">
-    <h2>Screenshots</h2>
     <a href="images/screenshot1.png" class="lightbox"><img src="images/screenshot1.png" alt="Add Employee View"></a>
     <a href="images/screenshot2.png" class="lightbox"><img src="images/screenshot2.png" alt="Monthly Payroll Trends"></a>
     <a href="images/screenshot3.png" class="lightbox"><img src="images/screenshot3.png" alt="Welcome to PayHUB Dashboard"></a>
@@ -109,6 +123,7 @@
   </footer>
 
   <div class="lightbox-overlay" id="lightbox">
+    <span class="close-btn" id="closeBtn">&times;</span>
     <img id="lightbox-img" src="" alt="Expanded screenshot">
   </div>
 
@@ -116,6 +131,7 @@
     const overlay = document.getElementById("lightbox");
     const overlayImg = document.getElementById("lightbox-img");
     const links = document.querySelectorAll(".lightbox");
+    const closeBtn = document.getElementById("closeBtn");
 
     links.forEach(link => {
       link.addEventListener("click", function(e) {
@@ -125,8 +141,10 @@
       });
     });
 
-    overlay.addEventListener("click", function () {
-      overlay.style.display = "none";
+    overlay.addEventListener("click", function(e) {
+      if (e.target === overlay || e.target === closeBtn) {
+        overlay.style.display = "none";
+      }
     });
   </script>
 </body>

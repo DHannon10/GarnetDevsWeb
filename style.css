@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fdfdfd;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  header {
+    background: #7c0a02;
+    color: white;
+    padding: 1.5em 1em;
+  }
+  h1, h2 {
+    margin-bottom: 0.5em;
+  }
+  .video, .features, .screenshots, .team, .links {
+    padding: 2em 1em;
+  }
+  img {
+    width: 300px;
+    margin: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  .links a {
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    background: #7c0a02;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  footer {
+    background: #eee;
+    padding: 1em;
+    font-size: 0.9em;
+  }
+  

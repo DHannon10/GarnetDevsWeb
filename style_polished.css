@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fdfdfd;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, #7c0a02, #a30000);
+  color: white;
+  padding: 3em 1em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.video, .features, .how-to-use, .team, .links {
+  padding: 2.5em 1em;
+}
+
+/* Card-like Section Styling */
+.card-section {
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 3em auto;
+  padding: 3em 2em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.card-section h2 {
+  margin-top: 0;
+}
+
+.video iframe {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Image Styling */
+img {
+  width: 300px;
+  margin: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.screenshots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2em 1em;
+}
+
+.screenshots img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.screenshots img:hover {
+  transform: scale(1.05);
+}
+
+/* Button Styling */
+.links a {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.75em 1.4em;
+  background: #7c0a02;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+.links a:hover {
+  background: #a30000;
+}
+
+/* Footer Styling */
+footer {
+  background: #eee;
+  padding: 2em 1em;
+  font-size: 0.9em;
+  color: #666;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Screenshot Heading */
+.screenshot-heading {
+  font-size: 2rem;
+  margin-top: 3rem;
+  font-weight: bold;
+}
+
+/* Lightbox Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1100;
+}
